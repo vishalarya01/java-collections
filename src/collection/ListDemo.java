@@ -1,6 +1,7 @@
 package collection;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class ListDemo {
@@ -22,10 +23,20 @@ public class ListDemo {
 
         System.out.println("All Book");
 
-        System.out.println(books);
+
+        // traverse using for loop
+        for(int i = 0; i<books.size(); i++){
+            System.out.println(books.get(i));
+        }
+
+        Iterator<Book> iterator = books.iterator();
 
 
-
+//        traverse using list iterator
+        while (iterator.hasNext()){
+            Book book = iterator.next();
+            System.out.println(book);
+        }
     }
 
 
